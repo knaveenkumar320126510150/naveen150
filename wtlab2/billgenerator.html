@@ -1,0 +1,126 @@
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restaurant Bill Generator</title>
+  <style media="screen">
+     body
+     {
+        font-weight: 100px;
+        font-family: 'sans-serif';
+        background-color: black;
+        background-image: url("food.jpg");
+     }
+    .box1 {
+      border: 5px solid;
+      border-color: yellow;
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+      background-color: #FAFA33;
+      background-image: url("food.jpg");
+      opacity: 0.8;
+    }
+
+    .box1 h1 {
+      text-align: center;
+    }
+
+  </style>
+  <script type="text/javascript">
+    function f() {
+
+      const v1 = parseFloat(document.getElementById("staters").value);
+      const v2 = parseFloat(document.getElementById("main course").value);
+      const v3 = parseFloat(document.getElementById("drinks").value);
+      const v4 = parseFloat(document.getElementById("desserts").value);
+      const v5 = v1 + v2 + v3 + v4;
+      const v6 = v5 + "Rs";
+      document.getElementById('p').innerHTML = v6;
+    }
+  </script>
+</head>
+
+<body style="background-image:url('hotel.jpeg')" >
+<marquee style="background-color:purple;" >today's special chicken-biriyani,10% discount for students</marquee>
+
+
+  <div class="box1">
+    <h1>Restaurant Bill Generator</h1>
+    <form class="" action="" method="post">
+      <table cellspacing = 10px>
+        <tr>
+          <td>
+            <label for="staters">Staters:</label>
+          </td>
+          <td>
+            <select id="staters" name="staters">
+              <option value="0">None</option>
+              <option value="150">Chicken 65</option>
+              <option value="100">French Fries</option>
+              <option value="200">Chicken Lollipop</option>
+              <option value="250">Dragon Chicken</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="main course">Main course:</label>
+          </td>
+          <td>
+            <select id="main course" name="main course">
+              <option value="0">None</option>
+              <option value="200">Chicken Briyani</option>
+              <option value="100">Veg Fried Rice</option>
+              <option value="150">Paneer Fried Rice</option>
+              <option value="200">Manchurian Fried Rice</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="drinks">Drinks</label>
+          </td>
+          <td>
+            <select id="drinks" name="drinks">
+              <option value="0">None</option>
+              <option value="20">Soda</option>
+              <option value="40">Sprite</option>
+              <option value="70">Pepsi</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="Desserts">Desserts</label>
+          </td>
+          <td>
+            <select id="desserts" name="desserts">
+              <option value="0">None</option>
+              <option value="50">Cheese cake</option>
+              <option value="50">Vanilla Cake</option>
+              <option value="60">Chocolate Cake</option>
+              <option value="100">Red Velvet Cake</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" name="button" onclick="f()">submit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Your total is:</p>
+          </td>
+          <td>
+            <p id="p"></p>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>

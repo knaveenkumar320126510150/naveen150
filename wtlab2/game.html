@@ -1,0 +1,31 @@
+
+
+<html>
+<body style="background-color:tomato;" >
+<h1>Heads or Tails</h1>
+<br>
+<br>
+<img src="game.jpeg" alt="flip a coin game" width="300" height="300">
+
+<script>
+var answer = prompt('Pick heads or tails!');
+
+//TOSS THE COIN TO GET COMPUTERS PICK
+
+var computerPick = Math.floor (   Math.random() * 2  ) ;
+if (computerPick == 0) {
+	computerPick = 'heads';
+} else {
+	computerPick = 'tails';
+}
+
+//COMPARE THE ANSWER TO THE COMPUTERPICK
+
+if (answer == computerPick) {
+	document.write('You guessed it, I picked ' + computerPick );
+} else {
+	document.write('Sorry, I picked ' + computerPick );
+}
+</script>
+</body>
+</html>

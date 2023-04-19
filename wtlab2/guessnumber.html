@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html style="background-color:black;">
+<head>
+<meta charset="utf-8">
+<title>Number Guessing Game</title>
+  <style>
+body {
+width: 50%;
+max-width:80px;
+min-width: 480px;
+ margin: 0 auto;
+    }
+</style>
+</head>
+<body style="color:DodgerBlue;">
+  <h1>Guess The Number </h1>
+    <p style="color:tomato;"><b>we have to select a random number from 1 to 10.if we guessed correct we suceed if not wrong</b></p>
+    <h2>Rules</h2>
+    <ol>
+        <li>we have to submit a number only.</li>
+        <li>the submitted number should between 1 to 10.</li>
+        <li>you will only win when your number is equal to randomly thrown number</li>
+        <li>text or other special characters not aloowed</li>
+    </ol>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <div class="form">
+ <label for="guessField"><b style="color:DodgerBlue">Enter a number:</b> </label>
+<input type = "text"
+id = "guessField"
+class = "guessField">
+<input type = "submit"
+value ="guess a number"
+class = "guessSubmit"
+id = "submitguess">
+</div>
+<script type = "text/javascript">
+var y = Math.floor(Math.random() * 10 + 1);
+var guess = 1;
+  document.getElementById("submitguess").onclick = function(){
+var x = document.getElementById("guessField").value;
+if(x == y)
+{    
+alert("the number you have typed is right "
+ + guess + "guess");
+          }
+else if(x > y)
+          {    
+guess++;
+ alert("wrong you has to guess a smaller number");
+          }
+ else
+          {
+ guess++;
+alert("you have to guess a larger element")
+          }
+}
+     
+    </script>
+</body>
+</html>           
+
