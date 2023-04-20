@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facebook Mini Project</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Facebook Mini Project</h1>
+	</header>
+	<div class="container">
+		<div class="left-sidebar">
+			<!-- Login form goes here -->
+			<form method="post" action="login.php">
+				<label>Email:</label><br>
+				<input type="email" name="email" required><br>
+				<label>Password:</label><br>
+				<input type="password" name="password" required><br>
+				<input type="submit" name="login" value="Login" required><br>
+				
+			</form>
+<a href="register.html"> <input type="submit" value="signup" required></a>
+		</div>
+		<div class="right-sidebar">
+			<!-- User profile goes here -->
+			<?php include 'profile.php'; ?>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
